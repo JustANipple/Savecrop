@@ -1,7 +1,10 @@
+/* Variables */
 /* = Fonts = */
 /* = Colors = */
 /* = Spacing = */
 /* = Transition = */
+/* Layout */
+/* Variables */
 html {
   scroll-behavior: smooth;
 }
@@ -23,6 +26,8 @@ input {
   box-sizing: border-box;
 }
 
+/* General */
+/* Variables */
 nav {
   display: flex;
   justify-content: space-between;
@@ -187,6 +192,7 @@ nav .wrapper .menu_open {
     display: none;
   }
 }
+/* Variables */
 footer {
   padding: 1rem 1.5rem;
 }
@@ -282,6 +288,8 @@ footer .copyright {
     margin-block-start: 2rem;
   }
 }
+/* Home */
+/* Variables */
 header {
   display: flex;
   flex-direction: column-reverse;
@@ -388,6 +396,7 @@ header .discover {
     font-size: 2rem;
   }
 }
+/* Variables */
 .meant_for {
   background-color: #fecc16;
   display: flex;
@@ -420,7 +429,7 @@ header .discover {
   text-decoration: none;
   /*
   &:nth-child(3) .img {
-      background: url(../../../assets/images/farmer.svg) no-repeat center/contain;
+      background: url(../../assets/images/farmer.svg) no-repeat center/contain;
   }
   */
 }
@@ -436,10 +445,10 @@ header .discover {
   background-position: center;
 }
 .meant_for .wrapper .category:nth-child(1) .img {
-  background: url(../../../assets/images/Meant-for/tractor.svg) no-repeat center/contain;
+  background: url(../../assets/images/Meant-for/tractor.svg) no-repeat center/contain;
 }
 .meant_for .wrapper .category:nth-child(2) .img {
-  background: url(../../../assets/images/Meant-for/research.svg) no-repeat center/contain;
+  background: url(../../assets/images/Meant-for/research.svg) no-repeat center/contain;
 }
 
 @media screen and (min-width: 768px) {
@@ -462,6 +471,7 @@ header .discover {
     margin-block-end: 1rem;
   }
 }
+/* Variables */
 .features {
   padding: 3.5rem 1.5rem;
   display: flex;
@@ -539,6 +549,7 @@ header .discover {
     break-inside: avoid;
   }
 }
+/* Variables */
 .ws {
   position: relative;
   padding: 4rem 1.5rem;
@@ -671,6 +682,8 @@ header .discover {
     font-size: 2.5rem;
   }
 }
+/* Agricoltura */
+/* Variables */
 .subscribe {
   background-color: #fecc16;
   padding: 1rem 1.5rem;
@@ -726,6 +739,7 @@ header .discover {
     width: fit-content;
   }
 }
+/* Variables */
 .crops {
   padding: 1rem 1.5rem;
   display: grid;
@@ -769,13 +783,13 @@ header .discover {
   padding-top: 2rem;
 }
 .crops .tomato .crop_img {
-  background: url(../../../assets/images/Crops/tomato-illustration1.svg) no-repeat right/contain;
+  background: url(../../assets/images/Crops/tomato-illustration1.svg) no-repeat right/contain;
 }
 .crops .potato .crop_img {
-  background: url(../../../assets/images/Crops/potato-illustration.svg) no-repeat left/contain;
+  background: url(../../assets/images/Crops/potato-illustration.svg) no-repeat left/contain;
 }
 .crops .onion .crop_img {
-  background: url(../../../assets/images/Crops/onion-illustration.svg) no-repeat right/contain;
+  background: url(../../assets/images/Crops/onion-illustration.svg) no-repeat right/contain;
 }
 
 @media screen and (min-width: 768px) {
@@ -843,6 +857,7 @@ header .discover {
     margin-inline: auto 0;
   }
 }
+/* Variables */
 .helping {
   display: flex;
   flex-direction: column;
@@ -897,6 +912,7 @@ header .discover {
     text-align: right;
   }
 }
+/* Variables */
 .process {
   --image-size: 7rem;
   --border-width: 5px;
@@ -963,6 +979,8 @@ header .discover {
     max-width: 25ch;
   }
 }
+/* About */
+/* Variables */
 .location {
   background-color: #fecc16;
 }
@@ -986,6 +1004,7 @@ header .discover {
     padding: 0;
   }
 }
+/* Variables */
 .testimonials {
   padding: 3rem 1.5rem;
 }
@@ -1049,6 +1068,7 @@ header .discover {
     margin-block: 0 1rem;
   }
 }
+/* Variables */
 .team {
   padding: 3rem 1.5rem;
   display: grid;
@@ -1188,10 +1208,4 @@ header .discover {
     transform: translateX(0);
     opacity: 1;
   }
-}
-/* Variables */
-/* Layout */
-/* General */
-/* Home */
-/* Agricoltura */
-/* About *//*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
