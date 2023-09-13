@@ -511,7 +511,7 @@ header .discover {
   content: "";
   position: absolute;
   left: -1.75rem;
-  background: url(../../../assets/images/Features/icon-check.svg) no-repeat center/contain;
+  background: url(../../assets/images/Features/icon-check.svg) no-repeat center/contain;
   width: 1.125rem;
   aspect-ratio: 1/1;
   filter: invert(29%) sepia(95%) saturate(1492%) hue-rotate(130deg) brightness(101%) contrast(101%);
