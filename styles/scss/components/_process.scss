@@ -1,0 +1,81 @@
+@use "../abstracts/variables" as v;
+
+.process {
+    --image-size: 7rem;
+    --border-width: 5px;
+    padding: v.$mobile-pad-b v.$mobile-pad-i;
+
+    .list {
+        padding: 0;
+        list-style: none;
+        position: relative;
+        width: fit-content;
+        margin-inline: auto;
+        display: grid;
+        align-items: center;
+        row-gap: 1rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            border: var(--border-width) solid v.$green;
+            border-radius: 100vw;
+            top: calc(var(--image-size) / -4);
+            bottom: 0;
+            left: calc(var(--image-size) / 2);
+            z-index: -1;
+        }
+
+        li {
+
+            .stage_img {
+                max-width: var(--image-size);
+                border: var(--border-width) solid v.$yellow;
+                border-radius: 100vw;
+                background-color: white;
+            }
+
+            .description {
+                margin-inline-start: calc((var(--image-size) / 2) + var(--border-width) * 2 + v.$mobile-pad-i);
+                max-width: 30ch;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .process {
+        --image-size: clamp(5rem, -0.7143rem + 11.9048vw, 10rem);;
+        --border-width: 5px;
+        padding: v.$desktop-pad-b v.$desktop-pad-i;
+
+        .list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            width: 100%;
+
+            &::before {
+                top: calc(var(--image-size) / 2 + var(--border-width));
+                left: calc(var(--image-size) / -4);
+                right: calc(var(--image-size) / -4);
+                bottom: unset;
+            }
+
+            li {
+                display: grid;
+                justify-items: center;
+                align-items: flex-start;
+
+                //.stage_img {}
+
+                .description {
+                    margin-inline: 0;
+                    text-align: center;
+                    max-width: 25ch;
+                }
+            }
+        }
+    }
+}

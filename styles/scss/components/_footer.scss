@@ -1,0 +1,123 @@
+@use "../abstracts/variables" as v;
+
+footer {
+    padding: v.$mobile-pad-b v.$mobile-pad-i;
+
+    .wrapper {
+        padding-block: v.$mobile-pad-b;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        .logo {
+            padding-block: v.$mobile-pad-b;
+
+            img {
+                max-height: 5rem;
+            }
+        }
+
+        .list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+
+            li {
+                margin-block-end: 1rem;
+                color: v.$par-clr;
+                width: fit-content;
+                position: relative;
+                overflow: hidden;
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+        }
+
+        .social {
+            font-size: calc(v.$fs * 1.5);
+            display: flex;
+            gap: 1rem;
+
+            .fa-facebook {
+                color: hsl(220, 46%, 45%);
+            }
+
+            .fa-linkedin {
+                color: hsl(210, 91%, 38%);
+            }
+        }
+    }
+
+    hr {
+        opacity: 20%;
+    }
+
+    .copyright {
+        color: v.$par-clr;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        padding-block: v.$desktop-pad-b calc(v.$desktop-pad-b / 2);
+        padding-inline: v.$desktop-pad-i;
+
+        .wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .logo {
+                padding: 0;
+            }
+
+            .list {
+                text-align: left;
+
+                li {
+
+                    &:hover {
+                        color: v.$green;
+                    }
+    
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        border-top: 1px solid v.$green;
+                        width: 100%;
+                        transform: translateX(-100%);
+                        transition: v.$transition;
+                    }
+    
+                    &:hover::after {
+                        transform: translateX(0);
+                    }
+                }
+            }
+
+            .social {
+                
+                a {
+                    transition: v.$transition;
+
+                    &:hover {
+                        transform: scale(1.25);
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            margin-block-start: 2rem;
+        }
+    }
+}

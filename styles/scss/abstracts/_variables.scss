@@ -1,0 +1,37 @@
+/* = Fonts = */
+//Families
+$ff-poppins: 'Poppins', sans-serif; //nav, footer, headings
+$ff-openSans: 'Open Sans', sans-serif; //p, placeholder, btn
+//Sizes
+$fs: 1rem;
+$fs-h: 2.5rem;
+$fs-p: 1.5rem;
+//Weights
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semiBold: 600;
+$fw-bold: 700;
+
+/* = Colors = */
+$yellow: #fecc16;
+$green: #009e4a;
+$pumpkin: hsl(22, 76%, 52%);
+$text: hsl(222, 81%, 16%);
+$par-clr: hsl(0, 0%, 34%);
+$white: hsl(0, 0%, 100%);
+$btn-close-bg: hsl(0, 0%, 95%);
+//Filters
+$green-filter: invert(29%) sepia(95%) saturate(1492%) hue-rotate(130deg) brightness(101%) contrast(101%);
+$pumpkin-filter: invert(50%) sepia(53%) saturate(1582%) hue-rotate(345deg) brightness(93%) contrast(91%);
+
+/* = Spacing = */
+//Mobile
+$mobile-pad-b: 1rem;
+$mobile-pad-i: 1.5rem;
+//Desktop
+$desktop-pad-b: 2rem;
+$desktop-pad-i: 8rem;
+$nav-height: 8rem;
+
+/* = Transition = */
+$transition: all .25s ease-in-out;

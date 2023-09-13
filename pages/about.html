@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/save-crop-spiga.png">
+    <!-- Title -->
+    <title>Chi siamo</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../styles/css/normalize.css">
+    <link rel="stylesheet" href="../styles/css/main.css">
+    <!-- Leafletjs -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/05ab744fcb.js" crossorigin="anonymous"></script>
+    <!-- Scripts -->
+    <script src="../scripts/leaflet.js" defer></script>
+    <script src="../scripts/nav-script.js" defer></script>
+    <script src="../scripts/slider.js" defer></script>
+</head>
+<body>
+    <!-- Nav bar -->
+    <nav>
+        <div class="logo">
+            <img 
+            src="../assets/images/Logo/save-crop.png"
+            alt="savecrop logo">
+        </div>
+        <div class="wrapper">
+            <button aria-label="open menu" class="btn_open">
+                <i class="fa-solid fa-bars-staggered icon_open"></i>
+            </button>
+            <div class="menu">
+                <div class="header">
+                    <p class="title">SAVE - crop protection</p>
+                    <button aria-label="close menu" class="btn_close">
+                        <i class="fa-solid fa-xmark icon_close"></i>
+                    </button>
+                </div>
+                <hr>
+                <ul class="list">
+                    <li> <a href="../index.html">Home</a></li>
+                    <li> <a href="agricoltura.html">Agricoltura</a> </li>
+                    <li> <a href="about.html">Chi siamo</a> </li>
+                    <li> <a href="#">Contatti</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Team -->
+    <section class="team">
+        <h2 class="title">Il nostro team</h2>
+        <div class="wrapper">
+            <img 
+            src=""
+            alt=""
+            aria-hidden="true"
+            class="user_picture">
+            <p class="name"></p>
+            <p class="role"></p>
+            <p class="description"></p>
+                <button class="left_arrow">
+                    <img 
+                    src="../assets/images/Team/arrow-left.svg" 
+                    alt="left arrow">
+                </button>
+                <button class="right_arrow">
+                    <img 
+                    src="../assets/images/Team/arrow-right.svg" 
+                    alt="right arrow">
+                </button>
+        </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="header">
+            <p class="label">Testimonials</p>
+            <h2 class="title">Cosa dicono di noi</h2>
+            <p class="description">
+                Il nostro biglietto da visita sono i nostri clienti: ecco cosa pensano delle nostre soluzioni
+            </p>
+        </div>
+        <div class="wrapper">
+
+            <div class="review">
+                <div class="header">
+                    <p class="title">
+                        Azienda agricola <br> 20 dipendenti
+                    </p>
+                    <p class="role">Amministratore delegato</p>
+                </div>
+                <p class="text">
+                    "L'assistenza immediata, il supporto di professionisti esperti e l'ampia possibilità di analizzare i dati rendono Beauty la soluzione adatta per noi"
+                </p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Map -->
+    <section class="location">
+        <div id="map"></div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="#">
+                    <img 
+                    src="../assets/images/Logo/save-crop.png" 
+                    alt="savecrop logo">
+                </a>
+            </div>
+            <ul class="list">
+                <li> <a href="../index.html">Home</a> </li>
+                <li> <a href="agricoltura.html">Agricoltura</a> </li>
+                <li> <a href="about.html">Chi siamo</a> </li>
+                <li> <a href="#">Contatti</a> </li>
+            </ul>
+            <div class="social">
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+            </div>
+            <div class="logo">
+                <a href="https://www.auroras.eu/?lang=it_it"
+                target="_blank">
+                    <img 
+                    src="../assets/images/Logo/logo_Auroras.png" 
+                    alt="auroras logo">
+                </a>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">
+            Auroras s.r.l. - c.so Piera Cillario 6-8 12051, Alba (CN) - P.IVA XXXXXXXXXXX
+        </p>
+    </footer>
+</body>
+</html>

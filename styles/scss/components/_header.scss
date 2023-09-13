@@ -1,0 +1,138 @@
+@use "../abstracts/variables" as v;
+
+header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-block: v.$mobile-pad-b calc(v.$mobile-pad-b * 9);
+    padding-inline: v.$mobile-pad-i;
+
+    .left {
+        text-align: center;
+
+        .title {
+            color: v.$text;
+            font-size: clamp(2rem, 1.6479rem + 1.5023vw, 3rem);
+
+            span {
+                color: v.$green;
+            }
+        }
+
+        .description {
+            font-size: calc(v.$fs * 1.125);
+            color: v.$par-clr;
+            line-height: 1.5;
+        }
+
+        form {
+            $border-rad: .5rem;
+            margin-block: calc(v.$mobile-pad-b * 2);
+            margin-inline: auto;
+            max-width: 30rem;
+            display: flex;
+            justify-content: center;
+            gap: .5rem;
+
+            label {
+                flex: 1.25;
+
+                input {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+
+                #email {
+                    border: 2px solid v.$btn-close-bg;
+                    padding: v.$mobile-pad-b;
+                    border-radius: $border-rad;
+
+                    &::placeholder {
+                        font-size: calc(v.$fs / 1.5);
+                    }
+                }
+            }
+
+            .btn_contact {
+                background-color: v.$green;
+                border: none;
+                border-radius: $border-rad;
+                color: v.$white;
+                flex: 1;
+            }
+        }
+    }
+
+    .discover {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        padding: v.$desktop-pad-b v.$desktop-pad-i;
+        flex-wrap: wrap;
+        height: calc(100vh - v.$nav-height - (v.$desktop-pad-b) * 4);
+
+        .left,
+        .right {
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+
+        .left {
+            text-align: left;
+
+            //.title {}
+
+            .description {
+                line-height: 1.75;
+            }
+
+            form {
+                justify-content: flex-start;
+                margin-inline: unset;
+
+                label {
+
+                    #email {
+
+                        &::placeholder {
+                            font-size: calc(v.$fs / 1.125);
+                        }
+                    }
+                }
+
+                .btn_contact {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .discover {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            .text {
+                cursor: pointer;
+            }
+            
+            .arrow_down {
+                font-size: calc(v.$fs * 2);
+            }
+
+            .text {
+                text-transform: uppercase;
+                color: v.$green;
+                font-weight: v.$fw-bold;
+                font-size: calc(v.$fs * 2);
+            }
+        }
+    }
+}

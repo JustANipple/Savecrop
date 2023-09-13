@@ -1,0 +1,81 @@
+@use "../abstracts/variables" as v;
+
+.testimonials {
+    padding: calc(v.$mobile-pad-b * 3) v.$mobile-pad-i;
+
+    .header {
+        color: v.$text;
+        text-align: center;
+
+        .label {
+            font-size: calc(v.$fs * 1.125);
+            font-weight: v.$fw-medium;
+        }
+
+        .title {
+            font-size: calc(v.$fs * 2);
+        }
+
+        .description {
+            line-height: 1.5;
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .review {
+            box-sizing: border-box;
+            background-color: v.$white;
+            border-radius: 1rem;
+            padding: calc(v.$mobile-pad-b * 2.75);
+            margin-block-start: 2rem;
+            color: v.$par-clr;
+            box-shadow: 0 1rem 3rem -3rem black;
+            max-width: 35rem;
+
+            p {
+                margin: 0;
+            }
+
+            .header {
+                text-align: left;                
+
+                .title {
+                    font-size: calc(v.$fs * 1.125);
+                    font-weight: v.$fw-bold;
+                    color: v.$text;
+                }
+
+                .role {
+                    margin-block: .25rem;
+                }
+            }
+
+            .text {
+                margin-block: 3rem;
+                line-height: 1.5rem;
+            }
+
+            .stars {
+                color: v.$yellow;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .testimonials {
+        padding: calc(v.$desktop-pad-b * 3) v.$mobile-pad-i;
+
+        .header {
+
+            .title {
+                font-size: calc(v.$fs * 2.5);
+                margin-block: 0 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+@use "../abstracts/variables" as v;
+
+.features {
+    padding: calc(v.$mobile-pad-b * 3.5) v.$mobile-pad-i;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .left {
+
+        img {
+            border-radius: 1rem;
+            max-width: 27rem;
+        }
+    }
+
+    .right {
+
+        .header {
+
+            .label {
+                font-size: calc(v.$fs * 1.25);
+                font-weight: v.$fw-semiBold;
+                color: v.$green;
+            }
+
+            .title {
+                color: v.$text;
+                font-size: calc(v.$fs * 2.5);
+            }
+
+            .description {
+                line-height: 1.5;
+                color: v.$par-clr;
+            }
+        }
+
+        .list {
+            $spacing: 1.75rem;
+            padding-inline-start: $spacing;
+            list-style: none;
+            color: v.$par-clr;
+            gap: .5rem;
+            
+            li {
+                font-size: calc(v.$fs / 1.125);
+                position: relative;
+                margin-block-end: 1rem;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: calc($spacing * -1);
+                    background: url(../../../assets/images/Features/icon-check.svg) no-repeat center/contain;
+                    width: 1.125rem;
+                    aspect-ratio: 1/1;
+                    filter: v.$green-filter;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .features {
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding-block: calc(v.$desktop-pad-b * 3);
+        padding-inline: clamp(1.5rem, -0.7887rem + 9.7653vw, 8rem);
+
+        .left {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .right {
+            flex: 1;
+
+            .header {
+                max-width: 50ch;
+
+                .label {
+                    margin-block-start: 0;
+                }
+            }
+
+            .list {
+                column-count: 2;
+                column-width: 3rem;
+                column-gap: clamp(1rem, -0.4085rem + 6.0094vw, 5rem);
+                width: fit-content;
+
+                li {
+                    break-inside: avoid;
+                }
+            }
+        }
+    }
+}

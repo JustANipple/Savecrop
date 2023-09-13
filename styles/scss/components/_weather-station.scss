@@ -1,0 +1,164 @@
+@use "../abstracts/variables" as v;
+
+.ws {
+    position: relative;
+    padding: calc(v.$mobile-pad-b * 4) v.$mobile-pad-i;
+    background-color: v.$yellow;
+    
+    .ws_sensors {
+
+        .list {
+            list-style: none;
+            padding: 0;
+            position: relative;
+    
+            li {
+                width: fit-content;
+                height: fit-content;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                font-size: calc(v.$fs / 1.125);
+                font-weight: v.$fw-bold;
+                color: v.$text;
+    
+                &:nth-child(1) {
+                    left: -10rem;
+                }
+    
+                &:nth-child(2) {
+                    top: 4rem;
+                    left: -14rem;
+                }
+    
+                &:nth-child(3) {
+                    top: 8rem;
+                    left: -13rem;
+                }
+    
+                &:nth-child(4) {
+                    flex-direction: row-reverse;
+                    top: .5rem;
+                    left: 10rem;
+                }
+    
+                &:nth-child(5) {
+                    flex-direction: row-reverse;
+                    text-align: right;
+                    top: 6.5rem;
+                    left: 12rem;
+                }
+    
+                .wrapper {
+                    background-color: white;
+                    border-radius: 100vw;
+                    width: 2.25rem;
+                    aspect-ratio: 1/1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 0px 1px 10px -5px black;
+                }
+            }
+        }
+    
+        .ws_img {
+            height: 8rem;
+            margin-block: v.$mobile-pad-b;
+        }
+    }
+
+    .content {
+        text-align: center;
+        display: grid;
+        place-content: center;
+
+        .title {
+            font-size: calc(v.$fs * 1.75);
+            font-weight: v.$fw-bold;
+            color: v.$text;
+        }
+
+        .description {
+            color: v.$par-clr;
+            line-height: 1.5;
+            max-width: 80ch;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .ws {
+        padding: calc(v.$desktop-pad-b * 3) v.$desktop-pad-i;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        .ws_sensors {
+            flex: 1;
+
+            .list {
+
+                li {
+                    font-size: v.$fs;
+
+                    &:nth-child(1) {
+                        top: 1rem;
+                        left: -20rem;
+                    }
+        
+                    &:nth-child(2) {
+                        top: 8rem;
+                        left: -28rem;
+                    }
+        
+                    &:nth-child(3) {
+                        top: 15rem;
+                        left: -25rem;
+                    }
+        
+                    &:nth-child(4) {
+                        flex-direction: row-reverse;
+                        top: 2rem;
+                        left: 25rem;
+                    }
+        
+                    &:nth-child(5) {
+                        flex-direction: row-reverse;
+                        text-align: right;
+                        top: 15rem;
+                        left: 20rem;
+                    }
+
+                    .wrapper {
+                        width: 3rem;
+
+                        i {
+                            font-size: calc(v.$fs * 1.5);
+                        }
+                    }
+                }
+            }
+
+            .ws_img {
+                height: 20rem;
+            }
+        }
+
+        .content {
+            flex: 1;
+            text-align: left;
+
+            .title {
+                font-size: calc(v.$fs * 2.5);
+            }
+        }
+    }
+}

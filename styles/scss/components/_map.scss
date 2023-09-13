@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as v;
+
+.location {
+    background-color: v.$yellow;
+
+    #map {
+        height: 500px;
+    
+        .leaflet-popup-content-wrapper,
+        .leaflet-popup-tip {
+            background-color: v.$yellow;
+        }
+    
+        .leaflet-popup-content {
+            text-align: center;
+    
+    
+            a {
+                display: block;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .location {
+        padding: 0;
+    }
+}

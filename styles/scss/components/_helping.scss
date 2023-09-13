@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as v;
+
+.helping {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: v.$mobile-pad-b v.$mobile-pad-i;
+
+    .wrapper:not(:last-child) {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.125);
+    }
+
+    .wrapper {
+        display: grid;
+        justify-items: center;
+
+        .illustration {
+            max-width: 15rem;
+        }
+
+        .description {
+            text-align: center;
+            margin-block-start: 0;
+            max-width: 50ch;
+            font-size: calc(v.$fs * 1.25);
+            font-weight: v.$fw-medium;
+            line-height: 1.5;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .helping {
+        padding: calc(v.$desktop-pad-b * 3) v.$desktop-pad-i;
+        justify-content: unset;
+        align-items: unset;
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-inline: 0 auto;
+
+            .illustration {
+                max-width: 20rem;
+            }
+
+            .description {
+                text-align: left;
+                margin-block: auto;
+            }
+
+            &:nth-child(2),
+            &:nth-child(4) {
+                flex-direction: row-reverse;
+                margin-inline: auto 0;
+
+                .description {
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

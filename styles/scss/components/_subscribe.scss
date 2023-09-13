@@ -1,0 +1,65 @@
+@use "../abstracts/variables" as v;
+
+.subscribe {
+    background-color: v.$yellow;
+    padding: v.$mobile-pad-b v.$mobile-pad-i;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    .sub_img {
+        flex: 1;
+    }
+
+    form {
+        flex: 1;
+        display: grid;
+        gap: 1rem;
+
+        label {
+            font-size: calc(v.$fs / 1.25);
+            font-weight: v.$fw-medium;
+            display: flex;
+            flex-direction: column;
+
+            input {
+                padding: v.$mobile-pad-b v.$mobile-pad-i;
+                margin-block: .5rem;
+                border: none;
+                border-radius: .5rem;
+                background-color: rgba(255, 255, 255, 0.75);
+            }
+        }
+
+        .submit_btn {
+            padding: v.$mobile-pad-b calc(v.$mobile-pad-i * 3);
+            border-radius: .5rem;
+            border: none;
+            background-color: v.$green;
+            font-weight: v.$fw-medium;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .subscribe {
+        padding: calc(v.$desktop-pad-b * 3) v.$desktop-pad-i;
+        flex-direction: row;
+        gap: 5rem;
+
+        .sub_img {
+            flex: 1;
+            max-width: 40rem;
+        }
+
+        form {
+            max-width: 40rem;
+
+            .submit_btn {
+                width: fit-content;
+            }
+        }
+    }
+}

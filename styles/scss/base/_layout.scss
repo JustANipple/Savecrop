@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as v;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    max-width: 100vw;
+    font-family: v.$ff-poppins;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+}

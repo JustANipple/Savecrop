@@ -1,0 +1,96 @@
+@use "../abstracts/variables" as v;
+
+.meant_for {
+    background-color: v.$yellow;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: calc(v.$mobile-pad-b * 4) v.$mobile-pad-i;
+
+    .intro {
+        text-align: center;
+        color: v.$text;
+
+        .title {
+            font-size: calc(v.$fs * 1.75);
+        }
+
+        .description {
+            color: v.$par-clr;
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .category {
+            flex: 1;
+            background-color: v.$white;
+            border-radius: 1rem;
+            text-align: center;
+            padding: calc(v.$mobile-pad-b * 3) calc(v.$mobile-pad-i * 2);
+            box-shadow: 0 0 2rem -1rem black;
+            text-decoration: none;
+    
+            .title {
+                color: v.$text;
+                font-weight: v.$fw-bold;
+                font-size: calc(v.$fs * 2.25);
+                margin-block-start: 0;
+            }
+
+            .img {
+                height: 16rem;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &:nth-child(1) .img {
+                background: url(../../../assets/images/Meant-for/tractor.svg) no-repeat center/contain;
+            }
+
+            &:nth-child(2) .img {
+                background: url(../../../assets/images/Meant-for/research.svg) no-repeat center/contain;
+            }
+
+            /*
+            &:nth-child(3) .img {
+                background: url(../../../assets/images/farmer.svg) no-repeat center/contain;
+            }
+            */
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .meant_for {
+        gap: 2rem;
+        padding: calc(v.$desktop-pad-b * 3) v.$desktop-pad-i;
+
+        .intro {
+
+            .title {
+                font-size: v.$fs-h;
+                margin-block: 0 1.5rem;
+            }
+        }
+
+        .wrapper {
+
+            .category {
+                transition: v.$transition;
+
+                &:hover {
+                    transform: scale(1.025);
+                    cursor: pointer;
+                }
+                
+                .title {
+                    margin-block-end: 1rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,169 @@
+@use "../abstracts/variables" as v;
+
+.team {
+    padding: calc(v.$mobile-pad-b * 3) v.$mobile-pad-i;
+    display: grid;
+    row-gap: 2rem;
+    justify-items: center;
+    overflow: hidden;
+    background-color: v.$yellow;
+
+    .title {
+        font-size: calc(v.$fs * 2);
+        color: v.$text;
+        margin-block: 0;
+    }
+
+    .wrapper {
+        padding: v.$mobile-pad-b v.$mobile-pad-i;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        border-radius: 1rem;
+        position: relative;
+        max-width: 40rem;
+        transition: all .5s ease-in-out;
+        box-shadow: 0 .5rem 3rem -2.5rem black;
+
+        * {
+            margin: 0;
+        }
+
+        .user_picture {
+            max-width: 5rem;
+        }
+
+        .name {
+            font-size: calc(v.$fs * 1.25);
+            font-weight: v.$fw-bold;
+            color: v.$text;
+            margin-block: 1rem .5rem;
+        }
+
+        .role {
+            font-style: italic;
+            color: v.$par-clr;
+        }
+
+        .description {
+            margin-block: v.$mobile-pad-b;
+            margin-inline: calc(v.$mobile-pad-i / 2);
+            max-width: 70ch;
+            color: v.$par-clr;
+        }
+
+        .left_arrow,
+        .right_arrow {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            max-height: 1.5rem;
+            margin-block: auto;
+            background-color: transparent;
+            border: 0;
+        }
+
+        .left_arrow {
+            left: 0;
+        }
+
+        .right_arrow {
+            right: 0;
+        }
+    }
+
+    .slide_out_left {
+        animation: slideOutLeft .5s ease-in-out forwards;
+    }
+    
+    .slide_out_right {
+        animation: slideOutRight .5s ease-in-out forwards;
+    }
+
+    .slide_in_left {
+        animation: slideInLeft .5s ease-in-out forwards;
+    }
+
+    .slide_in_right {
+        animation: slideInRight .5s ease-in-out forwards;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .team {
+        padding: calc(v.$desktop-pad-b * 3) v.$desktop-pad-i;
+
+        .title {
+            font-size: calc(v.$fs * 2.5);
+        }
+
+        .wrapper {
+            padding: v.$desktop-pad-b calc(v.$desktop-pad-i / 2);
+
+            .left_arrow,
+            .right_arrow {
+                max-height: 3rem;
+            }
+        }
+    }
+}
+
+@keyframes slideOutLeft {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideOutRight {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

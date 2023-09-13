@@ -1,0 +1,140 @@
+@use "../abstracts/variables" as v;
+
+.crops {
+    padding: v.$mobile-pad-b v.$mobile-pad-i;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: v.$yellow;
+
+    .tomato,
+    .potato,
+    .onion {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+
+        //.crop_img {}
+
+        .text {
+            text-align: center;
+            margin: calc(v.$mobile-pad-b * 2) /*v.$mobile-pad-i*/ 0;
+            color: v.$text;
+
+            .title {
+                font-size: calc(v.$fs * 2);
+                margin-block-start: 0;
+            }
+
+            .description {
+                line-height: 1.5;
+                margin-block-end: calc(v.$mobile-pad-b * 2);
+                margin-inline: auto;
+                max-width: 50ch;
+            }
+
+            .learn_more {
+                text-decoration: none;
+                color: inherit;
+                font-weight: v.$fw-bold;
+                text-transform: uppercase;
+                padding-top: 2rem;
+            }
+        }
+    }
+
+    .tomato {
+        //background-color: #F38777;
+
+        .crop_img {
+            background: url(../../../assets/images/Crops/tomato-illustration1.svg) no-repeat right/contain;
+            //background: url(../../../assets/images/Pomodoro1.png) no-repeat center/contain;
+        }
+    }
+
+    .potato {
+        //background-color: #FBEDD6;
+
+        .crop_img {
+            background: url(../../../assets/images/Crops/potato-illustration.svg) no-repeat left/contain;
+            //background: url(../../../assets/images/Patata1.png) no-repeat center/contain;
+        }
+    }
+
+    .onion {
+        //background-color: #D3ACB2;
+
+        .crop_img {
+            background: url(../../../assets/images/Crops/onion-illustration.svg) no-repeat right/contain;
+            //background: url(../../../assets/images/Cipolla.png) no-repeat center/contain;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .crops {
+        padding: v.$desktop-pad-b v.$desktop-pad-i;
+        row-gap: 3rem;
+
+        .tomato,
+        .potato,
+        .onion {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            //background: linear-gradient(to right, white, hsla(148, 100%, 31%, 0.5), white);
+
+            .text {
+                //margin-block: calc(v.$desktop-pad-b * 4);
+                //margin-inline: clamp(v.$mobile-pad-i, -7rem + 16.6667vw, v.$desktop-pad-i);
+                padding-inline-start: 2rem;
+                text-align: left;
+
+                .description {
+                    margin-block-end: v.$desktop-pad-b;
+                    margin-inline: unset;
+                }
+
+                .learn_more {
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: .125rem;
+                        border: 1px solid v.$text;
+                        transform: scaleX(0);
+                        transition: v.$transition;
+                    }
+
+                    &:hover::after {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+
+            .crop_img {
+                margin-inline-end: 5rem;
+            }
+        }
+
+        .potato {
+
+            .crop_img {
+                grid-column: 2;
+                margin-inline-start: 5rem;
+            }
+
+            .text {
+                grid-column: 1;
+                grid-row: 1;
+                text-align: right;
+                padding-inline-end: 2rem;
+
+                .description {
+                    margin-inline: auto 0;
+                }
+            }
+        }
+    }
+}

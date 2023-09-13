@@ -1,0 +1,21 @@
+/* Variables */
+@use "scss/abstracts/variables";
+/* Layout */
+@use "scss/base/layout";
+/* General */
+@use "scss/components/nav";
+@use "scss/components/footer";
+/* Home */
+@use "scss/components/header";
+@use "scss/components/meant-for";
+@use "scss/components/features";
+@use "scss/components/weather-station";
+/* Agricoltura */
+@use "scss/components/subscribe";
+@use "scss/components/crops";
+@use "scss/components/helping";
+@use "scss/components/process";
+/* About */
+@use "scss/components/map";
+@use "scss/components/testimonials";
+@use "scss/components/team";
